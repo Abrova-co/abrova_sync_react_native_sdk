@@ -22,11 +22,11 @@ yarn add @abrova/sync-react-native
 
 ### iOS Setup
 
-Add the native Abrova Sync SDK from Abrova Center to your app target in `ios/Podfile`:
+The native Abrova Sync SDK comes from Abrova Center. Add these two lines at the top of `ios/Podfile` (the second keeps public pods working):
 
 ```ruby
-pod 'PNProtocol', :git => 'https://center.abrova.ir/abrova/pn-protocol-ios.git'
-pod 'AbrovaSync', :git => 'https://center.abrova.ir/abrova/abrova-sync-ios-sdk.git', :tag => '0.3.0'
+source 'https://center.abrova.ir/abrova/specs.git'
+source 'https://cdn.cocoapods.org/'
 ```
 
 ```bash

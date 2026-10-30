@@ -1,3 +1,7 @@
+# Abrova pods come from Abrova Center; public pods from the CocoaPods CDN.
+source 'https://center.abrova.ir/abrova/specs.git'
+source 'https://cdn.cocoapods.org/'
+
 # Resolve react_native_pods.rb with node to allow for hoisting
 require Pod::Executable.execute_command('node', ['-p',
   'require.resolve(
@@ -24,10 +28,6 @@ target 'AbrovaSyncExample' do
   )
 
   pod 'MqttCocoaAsyncSocket', :modular_headers => true
-
-  # The native Abrova Sync SDK (used by @abrova/sync-react-native) is published on Abrova Center.
-  pod 'PNProtocol', :git => 'https://center.abrova.ir/abrova/pn-protocol-ios.git'
-  pod 'AbrovaSync', :git => 'https://center.abrova.ir/abrova/abrova-sync-ios-sdk.git', :tag => '0.3.0'
 
   target 'AbrovaSyncExampleTests' do
     inherit! :complete
